@@ -11,7 +11,7 @@ void sort(int arr[],int size){
       }
     }
   }
-}
+} 
 int main(){
   int f,m,l,c,n,search,arr[100];
 
@@ -22,13 +22,13 @@ int main(){
   for(c=0;c<n;c++){
     scanf("%d",&arr[c]);
   }
-  printf("Enter the value searched");
+  printf("Enter the value searched"); 
   scanf("%d",&search);
 
   sort(arr,n);
   f=0;
   l=n-1;
-  m=(f+l)/2;
+  m=(f+l)/2;    
  
   while(f<=l){
     if(arr[m]< search){
