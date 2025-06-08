@@ -24,7 +24,7 @@ int uni(int i, int j) {
 }
 
 int main() {
-    printf("\n\tImplementation of Kruskal's Algorithm\n");
+    printf("\n\tImplementation of    Kruskal's Algorithm\n");
     printf("Enter the number of vertices: ");
     scanf("%d", &n);
 
@@ -68,3 +68,24 @@ int main() {
     printf("\nMinimum cost = %d\n", mincost);
     return 0;
 }
+
+/*
+Enter the number of vertices: 4
+Enter the cost adjacency matrix:
+0 2 0 6
+2 0 3 8
+0 3 0 0
+6 8 0 0
+
+*/
+
+/*
+The edges of Minimum Cost Spanning Tree are:
+Edge 1: (1, 2) cost: 2
+Edge 2: (2, 3) cost: 3
+Edge 3: (1, 4) cost: 6
+
+Minimum cost = 11
+
+
+*/
