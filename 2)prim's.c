@@ -4,10 +4,10 @@
 #define MAX 10
 
 int main() {
-    int cost[MAX][MAX];    // Cost/weight matrix
-    int visited[MAX] = {0}; // Visited nodes
-    int distance[MAX];     // Minimum cost to connect to MST
-    int from[MAX];         // Parent node for each vertex
+    int cost[MAX][MAX];    
+    int visited[MAX] = {0}; 
+    int distance[MAX];    
+    int from[MAX];         
     int n, i, j, min, totalCost = 0, u;
 
     printf("Enter the number of nodes: ");
@@ -24,7 +24,7 @@ int main() {
     printf("Enter the starting node (1 to %d): ", n);
     scanf("%d", &start);
 
-    // Initialize distance[] and from[]
+
     for(i = 1; i <= n; i++) {
         distance[i] = cost[start][i];
         from[i] = start;
@@ -37,7 +37,7 @@ int main() {
         min = INF;
         u = -1;
 
-        // Find the closest unvisited node
+        
         for(j = 1; j <= n; j++) {
             if(!visited[j] && distance[j] < min) {
                 min = distance[j];
@@ -50,12 +50,12 @@ int main() {
             return -1;
         }
 
-        // Include the selected node in MST
+       
         visited[u] = 1;
         totalCost += distance[u];
         printf("%d -> %d   cost = %d\n", from[u], u, distance[u]);
 
-        // Update distance[] and from[] based on the new node u
+       
         for(j = 1; j <= n; j++) {
             if(!visited[j] && cost[u][j] < distance[j]) {
                 distance[j] = cost[u][j];
@@ -82,7 +82,7 @@ Enter the source node (1 to 4): 1
 
 /*
 1 -> 2  cost=1
-2 -> 3  cost=2
-3 -> 4  cost=4
+2 -> 3  cost=1
+3 -> 4  cost=2
 Total cost of MST = 4
 */

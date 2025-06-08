@@ -7,7 +7,7 @@ void sumofsub(int p, int k, int r) {
     int i;
     x[k] = 1;
 
-    // Check if current sum equals target
+    
     if ((p + s[k]) == d) {
         printf("Subset: ");
         for (i = 1; i <= k; i++)
@@ -16,11 +16,11 @@ void sumofsub(int p, int k, int r) {
         printf("\n");
     }
 
-    // Explore further with s[k] included
+    
     if (k + 1 <= n && (p + s[k] + s[k + 1]) <= d)
         sumofsub(p + s[k], k + 1, r - s[k]);
 
-    // Backtrack: explore without s[k]
+
     if (k + 1 <= n && (p + r - s[k] >= d) && (p + s[k + 1] <= d)) {
         x[k] = 0;
         sumofsub(p, k + 1, r - s[k]);

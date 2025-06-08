@@ -23,17 +23,18 @@ void dijkstra(int c[10][10], int n, int s, int d[10]) {
         }
 
         if(u == -1) {
-            // No more reachable nodes
+           
             break;
         }
 
         v[u] = 1;
 
         for(j = 1; j <= n; j++) {
-            if(v[j] == 0 && c[u][j] != INF && d[u] != INF && d[u] + c[u][j] < d[j]) {
-                d[j] = d[u] + c[u][j];
-            }
-        }
+        if(v[j] == 0 && c[u][j] != INF && d[u] + c[u][j] < d[j]) {
+        d[j] = d[u] + c[u][j]; 
+    }
+}
+
     }
 }
 

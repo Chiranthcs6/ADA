@@ -42,3 +42,14 @@ void main(){
       printf("%d \n",temp[i]);
   }
 }
+
+
+/*
+Enter the n value =6
+Enter the graph data=
+0 1 0 0 
+0 0 1 0 
+0 0 0 1
+0 0 0 0 
+Topological ordering is =1,2,3,4
+*/
